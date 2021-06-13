@@ -17,7 +17,7 @@ function Profile(props){
     setemail(x.data.email);
   }
   e();
-},[props.match.params.id])
+},[props.match.params.id, username, useremail])
     return (
         <>
         <header class="header">
