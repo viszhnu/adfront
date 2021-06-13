@@ -17,7 +17,7 @@ function Profile(props){
     setemail(x.data.email);
   }
   e();
-},[])
+},[props.match.params.id])
     return (
         <>
         <header class="header">

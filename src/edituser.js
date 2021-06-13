@@ -10,12 +10,15 @@ function Edituser(props) {
     email:useremail,
   };
 var i=0;
-  useEffect(async ()=>{
+  useEffect(()=>{
+    async function e(){
     let x= await UserData(props.match.params.id);
     console.log(x, props.match.params.id)
     setname(x.data.name);
     setemail(x.data.email);
-  },[])
+  }
+  e();
+},[props.match.params.id])
   
  
   return (
