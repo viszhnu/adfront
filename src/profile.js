@@ -9,12 +9,15 @@ function Profile(props){
     name:username,
     email:useremail,
   };
-  useEffect(async ()=>{
+  useEffect(()=>{
+    async function e(){
     let x= await UserData(props.match.params.id);
     console.log(x, props.match.params.id)
     setname(x.data.name);
     setemail(x.data.email);
-  },[])
+  }
+  e();
+},[])
     return (
         <>
         <header class="header">

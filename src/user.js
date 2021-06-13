@@ -6,10 +6,13 @@ import UserContext from "./usercontext";
 function User() {
   let[user, setuser]=useState([]);
 
-  useEffect(async ()=>{
+  useEffect(()=>{
+    async function e(){
     let x= await GetUserData();
     setuser(...user, x.data);
-  },[])
+  }
+  e();
+},[])
   return (
     <div class="container-fluid">
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
